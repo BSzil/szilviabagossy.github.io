@@ -1,270 +1,189 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bagossy Szilvia Rita – Marketing szakember</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --main-color: #7b2cbf;
-      --accent-color: #f72585;
-      --bg-color: #f8f8fc;
-      --text-color: #333;
-    }
-
     body {
-      font-family: 'Poppins', sans-serif;
       margin: 0;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      scroll-behavior: smooth;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fff;
+      color: #333;
+      overflow-x: hidden;
     }
-
     header {
-      background: linear-gradient(120deg, #7209b7, #f72585);
+      background: linear-gradient(135deg, #c22edb, #8428dc);
       color: white;
-      padding: 4rem 2rem;
       text-align: center;
-      position: relative;
+      padding: 4rem 1rem 2rem 1rem;
     }
-
     header img {
-      width: 150px;
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
       border-radius: 50%;
       border: 4px solid white;
       margin-bottom: 1rem;
     }
-
-    h1 {
+    header h1 {
       font-size: 2.5rem;
-      margin: 0.2rem 0;
+      margin-bottom: 0.2rem;
     }
-
     header p {
+      font-size: 1.1rem;
       font-style: italic;
-      max-width: 600px;
-      margin: auto;
+      margin-bottom: 1.5rem;
     }
-
-    nav {
-      margin-top: 1rem;
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
     }
-
-    nav a {
-      background-color: white;
-      color: var(--main-color);
-      padding: 0.6rem 1rem;
+    .menu a {
+      background: white;
+      color: #8428dc;
+      padding: 0.6rem 1.2rem;
+      border-radius: 25px;
+      font-weight: bold;
       text-decoration: none;
-      border-radius: 20px;
-      margin: 0 0.5rem;
-      font-weight: 500;
-      transition: 0.3s;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-
-    nav a:hover {
-      background-color: var(--accent-color);
-      color: white;
+    .menu a:hover {
+      background: #f3e5f5;
     }
-
-    main {
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem;
-    }
-
     section {
-      margin-bottom: 3rem;
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
       opacity: 0;
       transform: translateY(30px);
-      transition: all 0.7s ease;
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     }
-
     section.visible {
       opacity: 1;
       transform: translateY(0);
     }
-
-    h2 {
-      color: var(--main-color);
-      font-size: 1.8rem;
+    section h2 {
+      color: #8428dc;
       margin-bottom: 1rem;
     }
-
-    ul {
-      padding-left: 1.5rem;
+    section ul {
+      padding-left: 1.2rem;
     }
-
-    .contact {
-      background-color: #fff0f6;
-      padding: 2rem;
-      border-radius: 10px;
-      text-align: center;
+    section li {
+      margin-bottom: 0.5rem;
     }
-
-    .contact strong {
-      display: block;
-      font-size: 1.1rem;
-      margin: 0.5rem 0;
-    }
-
-    .btn {
-      display: inline-block;
-      background-color: var(--accent-color);
-      color: white;
-      padding: 0.8rem 1.5rem;
-      border-radius: 30px;
-      margin-top: 1rem;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background-color: #c9184a;
-    }
-
     footer {
       text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #999;
+      background-color: #f3e5f5;
+      color: #8428dc;
+      padding: 2rem 1rem;
+      font-weight: bold;
+      line-height: 1.8;
     }
-
-    .skills span {
-      background-color: #e0c3fc;
-      color: #4a148c;
-      padding: 0.3rem 0.8rem;
-      margin: 0.3rem;
-      display: inline-block;
-      border-radius: 15px;
-      font-size: 0.9rem;
-    }
-
-    .linkedin-button {
-      display: inline-block;
-      margin-top: 1rem;
-      background: #0a66c2;
-      color: white;
-      padding: 0.7rem 1.2rem;
-      border-radius: 25px;
+    a {
+      color: #8428dc;
       text-decoration: none;
-      font-weight: 500;
     }
-
-    .linkedin-button:hover {
-      background: #004182;
-    }
-
-    @keyframes typewriter {
-      from { width: 0 }
-      to { width: 100% }
-    }
-
-    .typewriter {
-      overflow: hidden;
-      border-right: .15em solid #fff;
-      white-space: nowrap;
-      margin: 0 auto;
-      letter-spacing: .08em;
-      animation: typewriter 3s steps(40, end);
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="IMG_4915.jpeg" alt="Bagossy Szilvia Rita portréja">
+    <img src="IMG_4945.jpeg" alt="Bagossy Szilvia portré">
     <h1>Bagossy Szilvia Rita</h1>
-    <p class="typewriter">Stratégia. Kreativitás. Megvalósítás. – Ez vagyok én.</p>
-    <nav>
+    <p>Stratégia. Kreativitás. Megvalósítás. – Ez vagyok én.</p>
+    <div class="menu">
       <a href="#rolam">Rólam</a>
       <a href="#kepessegek">Képességek</a>
       <a href="#tapasztalat">Tapasztalat</a>
       <a href="#tanulmanyok">Tanulmányok</a>
       <a href="#kapcsolat">Kapcsolat</a>
-    </nav>
+    </div>
   </header>
 
-  <main>
-    <section id="rolam">
-      <h2>Rólam</h2>
-      <p>
-        Több mint tíz év tapasztalattal rendelkezem a marketing világában – különösen az FMCG szektorban, ahol olyan márkákkal dolgoztam, mint a Rama, Violife, Knorr vagy Lipton. Stratégiai látásmódomat ötvözöm a kreativitással, miközben az üzleti hatékonyság mindig szem előtt van.
-      </p>
-      <p>
-        <strong>2024 tavaszától egészségügyi szünetet tartottam</strong>, de most újra lendületben vagyok, és keresem azt a szakmai lehetőséget, ahol értéket teremthetek, inspirálhatok, és ahol a márkák növekedéséhez érdemben hozzájárulhatok.
-      </p>
-    </section>
+  <section id="rolam">
+    <h2>Rólam</h2>
+    <p>
+      Több mint tíz év tapasztalattal rendelkezem a marketing világában – különösen az FMCG szektorban, ahol olyan márkákkal dolgoztam, mint a Rama, Violife, Knorr vagy Lipton.
+    </p>
+    <p>
+      Stratégiai látásmódomat ötvözöm a kreativitással, miközben az üzleti hatékonyság mindig szem előtt van.
+    </p>
+    <p>
+      <strong>2024 tavaszától egészségügyi szünetet tartottam</strong>, de most újra lendületben vagyok, és keresem azt a szakmai lehetőséget, ahol értéket teremthetek, inspirálhatok, és ahol a márkák növekedéséhez érdemben hozzájárulhatok.
+    </p>
+  </section>
 
-    <section id="kepessegek">
-      <h2>Képességek</h2>
-      <div class="skills">
-        <span>Stratégiai marketingtervezés</span>
-        <span>B2C és B2B kampányok</span>
-        <span>Digitális & offline kampányok</span>
-        <span>Márkaépítés, márkakommunikáció</span>
-        <span>Webtartalom & SEO</span>
-        <span>Rendezvényszervezés</span>
-        <span>Trade marketing</span>
-        <span>Termékbevezetés</span>
-        <span>Csomagolásfejlesztés</span>
-        <span>Nemzetközi projektmenedzsment</span>
-        <span>Photoshop</span>
-        <span>Canva</span>
-        <span>SAP</span>
-        <span>DAM</span>
-        <span>Nielsen</span>
-        <span>MS Office</span>
-      </div>
-    </section>
+  <section id="kepessegek">
+    <h2>Képességek</h2>
+    <ul>
+      <li>Stratégiai marketingtervezés (B2C és B2B)</li>
+      <li>Digitális és offline kampányok lebonyolítása</li>
+      <li>Márkaépítés és márkakommunikáció</li>
+      <li>Weboldal- és tartalomkezelés, SEO alapok</li>
+      <li>Trade marketing, rendezvényszervezés</li>
+      <li>Termékbevezetés, csomagolásfejlesztés</li>
+      <li>Nemzetközi projektmenedzsment</li>
+      <li>Photoshop, Canva, SAP, DAM, Nielsen, MS Office</li>
+    </ul>
+  </section>
 
-    <section id="tapasztalat">
-      <h2>Tapasztalat</h2>
-      <p><strong>Upfield Hungary Kft.</strong> – Marketing specialista <br><em>2021 – 2024. január</em></p>
-      <p><strong>Saint-Gobain Hungary</strong> – Marketing specialista <br><em>2019 – 2021</em></p>
-      <p><strong>Unilever</strong> – Artwork & marketingprojektek <br><em>2017 – 2019</em></p>
-      <p><strong>Sole-Mizo Zrt.</strong> – Brand és PR koordinátor <br><em>2013 – 2016</em></p>
-      <p><strong>Nemzetközi tapasztalatok:</strong> Bécs, Koppenhága, Los Angeles, Finnország</p>
-    </section>
+  <section id="tapasztalat">
+    <h2>Tapasztalat</h2>
+    <ul>
+      <li><strong>Upfield Hungary Kft.</strong> – Marketing specialista (2022–2024)</li>
+      <li><strong>Saint-Gobain Hungary</strong> – Marketing specialista (2020–2022)</li>
+      <li><strong>Modul Kft.</strong> – Projektmenedzser tanácsadó (2018–2019)</li>
+      <li><strong>Unilever</strong> – Artwork & marketingprojektek (2015–2018)</li>
+      <li><strong>Sole-Mizo Zrt.</strong> – Brand és PR koordinátor (2014–2015)</li>
+      <li><strong>Nemzetközi tapasztalatok:</strong> Bécs, Koppenhága, Los Angeles, Finnország</li>
+    </ul>
+  </section>
 
-    <section id="tanulmanyok">
-      <h2>Tanulmányok</h2>
-      <ul>
-        <li>Debreceni Egyetem – Kereskedelem és marketing (mesterképzés)</li>
-        <li>University of Southern California – Business English (Los Angeles)</li>
-        <li>University of Jyväskylä, Finland – Üzleti ösztöndíj</li>
-        <li>Copenhagen Business School (CBS) – Nemzetközi marketing</li>
-        <li>University of Vienna – Diplomamunka, OTDK 3. helyezés</li>
-      </ul>
-    </section>
+  <section id="tanulmanyok">
+    <h2>Tanulmányok</h2>
+    <ul>
+      <li>Debreceni Egyetem – Kereskedelem és marketing (mesterképzés)</li>
+      <li>University of Southern California – Business English (Los Angeles)</li>
+      <li>University of Jyväskylä, Finland – Üzleti ösztöndíj</li>
+      <li>Copenhagen Business School (CBS) – Nemzetközi marketing</li>
+      <li>University of Vienna – Diplomamunka, OTDK 3. helyezés</li>
+    </ul>
+  </section>
 
-    <section id="kapcsolat" class="contact">
-      <h2>Vedd fel velem a kapcsolatot</h2>
-      <strong>Email:</strong> szilvia.bagossy@gmail.com  
-      <strong>Telefon:</strong> +36 30 981 3599 <br>
-      <a href="https://www.linkedin.com/in/szilviabagossy" class="linkedin-button" target="_blank">LinkedIn Profil</a>
-      <br>
-      <a href="BagossySzilvia_CV.pdf" class="btn" download>Letölthető CV (PDF)</a>
-    </section>
-  </main>
+  <section id="kapcsolat">
+    <h2>Kapcsolat</h2>
+    <p style="text-align: center; font-size: 1.1rem;">
+      <strong>Email:</strong> <a href="mailto:szilvia.bagossy@gmail.com">szilvia.bagossy@gmail.com</a><br>
+      <strong>Telefon:</strong> <a href="tel:+36309813599">+36 30 981 3599</a><br>
+      <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/szilviabagossy" target="_blank">linkedin.com/in/szilviabagossy</a>
+    </p>
+  </section>
 
   <footer>
-    © 2025 Bagossy Szilvia Rita
+    Köszönöm, hogy meglátogattad az oldalam – várom a kapcsolatfelvételt!
   </footer>
 
   <script>
-    const sections = document.querySelectorAll("section");
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
         }
       });
-    }, { threshold: 0.2 });
+    }, { threshold: 0.1 });
 
-    sections.forEach(section => observer.observe(section));
+    document.querySelectorAll("section").forEach(section => {
+      observer.observe(section);
+    });
   </script>
 
 </body>
